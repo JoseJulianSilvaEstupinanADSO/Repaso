@@ -99,6 +99,13 @@ li.item:hover  a{
     border-radius: var(--border_radius);
     border: none;
 }
+.white{
+  background: var(--white);
+  color: var(--mineshaft);
+}
+.black{
+  color: var(--mineshaft);
+}
 .cards{
     display: flex;
     flex-wrap: wrap;

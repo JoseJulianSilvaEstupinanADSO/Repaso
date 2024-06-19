@@ -44,6 +44,46 @@ const nueva = api.innerHTML = "¿QUE ES API?"
 // console.log(oldclass)
 // console.log(item)
 
+let cards = dom.getElementById("cards")
+let array = [...cards.children]
+let array2 = [...dom.querySelectorAll("div.card__body > p.card__paragraph")]
+// console.log(array2)
+array.map((a,i) => {
+  if (i % 2 == 0) {
+    a.classList.toggle("white")
+    array2[i].classList.toggle("black")
+  }
+})
 
-console.log(nueva)
-console.log(body.childNodes)
+const $formulario = dom.getElementById("search")
+
+// $formulario.setAttribute("enctype","multipart/form-data")
+const $input = dom.querySelector(".input")
+
+$input.setAttribute("autocomplete", "off")
+$input.removeAttribute("placeholder")
+$input.setAttribute("placeholder","hola")
+// console.log(nueva)
+// console.log(body.childNodes)
+// console.log(cards)
+// console.log(array)
+
+
+
+// CSS
+
+const $html = dom.documentElement
+const $style = getComputedStyle($html).getPropertyValue("--mineshaft")
+$html.style.setProperty("--mineshaft", "white")
+$html.style.setProperty("--white","black")
+
+
+// console.log($html)
+// console.log($style)
+
+const $parrafo = dom.querySelector("#elemento")
+
+// console.log($parrafo)
+
+// $parrafo.textContent = ("hola")
+// $parrafo.innerHTML = ("<b>hola</b>")
